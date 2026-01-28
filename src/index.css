@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-base-bg text-base-text antialiased;
+}
+
+::selection {
+  background: rgba(201, 162, 74, 0.25);
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-[1120px] px-4 sm:px-6;
+  }
+
+  .section {
+    @apply py-14 sm:py-20;
+  }
+
+  .eyebrow {
+    @apply text-xs tracking-[0.22em] uppercase text-base-muted;
+  }
+
+  .h1 {
+    @apply text-4xl sm:text-5xl font-semibold leading-[1.08] tracking-[-0.02em];
+  }
+
+  .h2 {
+    @apply text-2xl sm:text-3xl font-semibold leading-tight tracking-[-0.01em];
+  }
+
+  .p {
+    @apply text-base sm:text-[1.05rem] leading-relaxed text-base-muted;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-base-bg;
+  }
+
+  .divider-gold {
+    @apply h-[2px] w-12 bg-brand-gold rounded-full;
+  }
+}
